@@ -1,0 +1,14 @@
+matplotlib
+joblib
+googletrans
+numpy
+requests
+pandas
+beautifulsoup4
+scikit_learn
+gunicorn
+flask
+tensorflow
+keras
+optuna
+deap

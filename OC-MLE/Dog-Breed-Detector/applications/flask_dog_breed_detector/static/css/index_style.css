@@ -1,0 +1,143 @@
+/* APP LOGO */
+
+.img-container {
+    text-align: center;
+    display: block;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* IMG LOGO */
+
+#DogBreedsDetectorLogo {
+	width: 550px;
+}
+
+
+/* APP BACKGROUND */
+
+body {
+  background-color: #fff;
+
+}
+
+
+/* MAIN OUTPUT CARD */
+
+#DogBreedDetectedCard {
+	width: 50%;
+	height: 50%;
+	margin: auto;
+	position: absolute;
+	top: 50;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#PredictedBreed {
+	height: 75%;
+}
+
+#PredictedBreedLabel, #PredictedBreedAccuracyValue {
+	font-size: 20px;
+	font-weight: bold;
+	float: right;
+}
+
+#PredictedBreedAccuracyIcon {
+	font-size: 35px;
+	margin-left: 2px;
+}
+
+
+/* MAIN CARD ACTION : GRAD CAM SWITCH */
+
+.switch {
+	float: right;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after{
+    background-color: white;
+}
+
+.switch label {
+	font-size: 16px;
+}
+
+#GradCAM {
+	color: black;
+	text-decoration: underline;
+}
+
+
+/* IMAGE UPLOADER */
+
+#DogImageUploader {
+	width: 50px;
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 50;
+    right: 0;
+}
+
+#DogImageUploaderButtonLogo {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: -25;
+	bottom: 0;
+	right: 0;
+}
+
+
+/* DETECTION ANIMATION (e.g: https://www.youtube.com/watch?v=ttWXapXj4cg) */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  margin-right: 100px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  margin: 8px;
+  border: 4px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

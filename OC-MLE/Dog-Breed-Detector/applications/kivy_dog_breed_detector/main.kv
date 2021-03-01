@@ -1,0 +1,49 @@
+FloatLayout:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas:
+        	Color:
+        		rgba: 0., 0., 0., 1. # 0.5, 0.5, 0.5, 0.5
+        	Rectangle:
+        		size: self.size
+        		pos: self.pos
+
+        MDToolbar:
+            id: app_title
+            title: "DOG BREED DETECTOR"
+            bold: True
+            anchor_title: "center"
+            md_bg_color: [0., 0., 0., 1.]
+
+        MDToolbar:
+        	id: breed_label
+        	title: ""
+        	anchor_title: "center"
+        	md_bg_color: [1., 1., 1., 1.]
+        	left_action_items: [["dog", lambda x: app.image_displayer_callback()]]
+
+        DogCard:
+        	id: dog_card
+        	elevation: 0
+
+        MDToolbar:
+        	id: accuracy_value
+        	title: ""
+        	anchor_title: "center"
+        	md_bg_color: [1., 1., 1., 1.]
+        	left_action_items: [["crosshairs-gps", lambda x: x]]
+
+        DogBreedDetectorButton:
+            id: detector_button
+            text_color: [1., 1., 1., 1.]
+            md_bg_color: [1., 1., 1., 1.]
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            size_hint: 0.25, 0.25
+            elevation: 0
+            on_release:
+                self.choose()
+            Image:
+                source: 'img/dog_breeds_detector_button_logo.png'
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                size_hint: 3.5, 3.5
+        

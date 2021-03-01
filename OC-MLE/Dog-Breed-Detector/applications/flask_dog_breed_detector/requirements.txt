@@ -1,0 +1,11 @@
+tensorflow==2.4.0
+numpy
+Flask
+flask_monitoringdashboard
+opencv_python
+matplotlib
+tensorflow_hub
+six
+Pillow
+schedule
+gunicorn

@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+     <!-- https://materializecss.com/ -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/index_style.css">
+
+    <title>StackOverflow AutoTagger</title>
+  </head>
+  <body>
+    <div class="container">
+        <br><br>
+            <!-- App logo -->
+            <span class="img-container">
+                <img src="{{ url_for('static', filename='img/' + image_name) }}">
+            </span>
+        <br><br>
+            <!-- App form -->
+            <div class="row">
+                <form method="POST" enctype="multipart/form-data" class="col s12" id="TextForm" >
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="QuestionTextArea" class="materialize-textarea white-text" name="text"></textarea>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <p class="center-align">
+                        <!-- Tagging button -->
+                        <button id="start-tagging" class="btn waves-effect waves-light" type="submit">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </p>
+                </form>
+            </div>
+        <div id="Results"></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+    <script src="../static/js/stackoverflow_autotagger_dynamics.js"></script>
+  </body>
+</html>
+

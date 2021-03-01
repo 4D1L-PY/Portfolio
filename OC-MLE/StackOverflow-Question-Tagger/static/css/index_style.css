@@ -1,0 +1,143 @@
+/* APP LOGO */
+.img-container {
+    text-align: center;
+    display: block;
+}
+
+img {
+    width: 550px;
+    height: 250px;
+    /* border: 1px solid #1f2e3c;
+    box-shadow: 0 2px 0 0 #1f2e3c;
+    padding-left: 10px;
+    margin-right: 60px;
+    background-color: rgba(77,136,255,.2);
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+}
+/* APP BACKGROUND */
+body {
+  background-color: #2c3f51; /*#03202F, orange;*/
+
+}
+
+/* INPUT QUESTION (FORM) */
+#QuestionTextArea {
+    font-size: 18px !important;
+}
+/* label color */
+.input-field label {
+    color: #03202F !important;
+}
+/* label focus color */
+.input-field textarea:focus + label {
+   color: white !important;
+}
+/* label underline focus color */
+.input-field textarea:focus {
+   border-bottom: 1px solid white !important;
+   box-shadow: 0 1px 0 0 white !important
+ }
+/* valid color */
+.input-field textarea.valid {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix {
+    color: white;
+}
+.input-field .prefix.active {
+    color: white;
+}
+
+/* TAGGING BUTTON */
+#start-tagging {
+    margin-right: 100px;
+    border: 1px solid #1f2e3c; /* #4d88ff */ 
+    background-color: rgba(77,136,255,.2);
+}
+#start-tagging:hover {
+    color: #fff;
+    background-color: rgba(77,136,255,.6);
+    border-color: rgba(77,136,255,.2);
+}
+
+/* RESET BUTTON */
+#reset-question {
+    margin-right: 100px;
+    border: 1px solid #1f2e3c; /* #4d88ff */
+    background-color: rgb(187, 45, 41, .8);
+}
+#reset-question:hover {
+    color: #fff;
+    background-color: rgba(187, 45, 41);
+    border-color: rgb(187, 45, 41, .8);
+}
+
+/* TAGGING RESULTS (TABLE) */
+table {
+    width: 75%;
+    margin-left: 155px;
+}
+td, th {
+    color: white !important;
+    border-bottom: 2px solid white !important;
+}
+/*
+span {
+    margin: 20px;
+}
+*/
+.TagBadge {
+    background-color: rgb(89, 196, 102);
+    margin: 2px 20px 2px 0px; /* . 4 . . */
+    min-height: 4px;
+    box-shadow: rgb(89, 196, 102) 0px 0px 10px;
+    display: inline-block;
+    width: 15%;
+    /* border-radius: 15px; */ /* Rounded badges */
+    font-size: 18px;
+}
+
+/* TAGGING ANIMATION (e.g: https://www.youtube.com/watch?v=ttWXapXj4cg) */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  margin-right: 100px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

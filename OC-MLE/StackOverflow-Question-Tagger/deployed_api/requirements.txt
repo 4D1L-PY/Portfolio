@@ -1,0 +1,13 @@
+numpy
+pandas
+Keras
+fuzzywuzzy
+Flask==1.1.1
+nltk
+googletrans==3.0.0
+tensorflow==2.3.0
+requests
+spacy>=2.3.0,<2.3.1
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.0/en_core_web_sm-2.3.0.tar.gz#egg=en_core_web_sm
+beautifulsoup4
+

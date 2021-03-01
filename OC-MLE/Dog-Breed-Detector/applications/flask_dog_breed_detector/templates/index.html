@@ -1,0 +1,106 @@
+<html>
+  
+  <head>
+    <!--Import Google Roboto Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--Import Iconify Icon Font-->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import Materialize CSS : https://materializecss.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/css/index_style.css">
+
+    <title>Dog Breed Detector</title>
+  </head>
+
+  <body>
+    <div class="container">
+        <br><br>
+            <!-- App Logo -->
+            <span class="img-container">
+                <img id="DogBreedsDetectorLogo" src="{{ url_for('static', filename='img/' + app_logo) }}">
+            </span>
+        <br><br>
+            <!-- App Form -->
+            <div class="row">
+
+                <form method="POST" enctype="multipart/form-data" class="col s12" id="UploadForm">
+
+                    <div class="file-field input-field">
+
+                    <!-- Output -->
+
+                    {% if dog_image %}
+
+                     <div class="row">
+                        <div id="DogBreedDetectedCard" class="col s12 m6">
+                          <div class="card hoverable">
+
+                            <!-- Display Dog Image -->
+                            <div class="card-image">
+                              <img id="DogImage" class="materialboxed" src="static/img/dogs/{{dog_image}}">
+                            </div>
+
+                            <!-- Display Predicted Breed -->
+                            <div id="PredictedBreed" class="card-content">
+                                <!-- Predicted Breed Icon -->
+                                <span class="iconify" data-icon="mdi-dog" data-inline="false" width="2.5em" height="2.5em" title="Breed"></span>
+                                <!-- Predicted Breed Label -->
+                                <p id="PredictedBreedLabel">{{breed}}</p>
+                            </div>
+                            <br>
+                            <!-- Display Predicted Breed Accuracy -->
+                            <div id="PredictedBreedAccuracy" class="card-content" >
+                                <!-- Predicted Breed Accuracy Icon -->
+                                <span id="PredictedBreedAccuracyIcon" class="material-icons" title="Accuracy">gps_fixed</span>
+                                <!-- Predicted Breed Accuracy -->
+                                <p id="PredictedBreedAccuracyValue">{{score}} %</p>
+                            </div>
+
+                            <!-- Grad CAM Switch -->                                        
+                            <div class="card-action">
+                                <span class="switch">
+                                    <label class="black-text">
+                                        Original
+                                        <input id="check" type="checkbox">
+                                        <span  id="check-lever" class="lever black"></span>
+                                        <!-- Grad CAM Paper Link -->  
+                                        <a id="GradCAM" href="https://arxiv.org/pdf/1610.02391.pdf" target="_blank" rel="noopener noreferrer" title="Read paper">Grad CAM</a>
+                                    </label>
+                                </span>
+                                <br>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    {% endif %}
+
+                    
+                    <p id="DogBreedDetectorInput" class="center-align">
+                        <!-- Input : image Uploader Button -->
+                        <div id="DogImageUploader" class="btn-floating btn-large waves-effect waves-light pulse white" title="Upload a dog image"> 
+                            <!-- Button Logo -->
+                            <img id="DogImageUploaderButtonLogo" src="{{ url_for('static', filename='img/' + upload_button_logo) }}"/>
+                            <!-- Image Uploader Input File --> 
+                            <input id="DogImageUploaderInput" type="file" name="image" onchange="form.submit()">
+                        </div>
+                    
+                    </p>
+                
+                </form>
+                
+            </div>
+    </div>
+    <!--Import jQuery -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Import Materialize CSS JavaScript : https://materializecss.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Import Custom JavaScript -->
+    <script src="../static/js/dog_breed_detector_dynamics.js"></script>
+
+  </body>
+
+</html>
