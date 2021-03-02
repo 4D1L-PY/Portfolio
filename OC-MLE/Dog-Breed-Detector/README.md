@@ -16,7 +16,7 @@ _They would therefore like to obtain an algorithm capable of classifying the ima
 
 **Methodology :**
 
-Training data was preprocessed by **cropping images** with **object detection algorithms** ([**Inception Resnet V2**](https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1), [**MobileNet V2**](https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1)), in order to remove irrelevant objects (humans, other animals, etc ...) by targeting dogs specifically in the images.
+Training data was preprocessed by **cropping images** with **object detection algorithms** ([**Faster R-CNN + Inception Resnet V2**](https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1), [**MobileNet V2**](https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1)), in order to remove irrelevant objects (humans, other animals, etc ...) by targeting dogs specifically in the images.
 
 Two learning methodologies were compared in order to pursue this project :
 
@@ -25,14 +25,14 @@ Two learning methodologies were compared in order to pursue this project :
 - **Training model with transfert learning** : build an image classifier from pretrained model and fine-tune model weights with transfert learning
 
 Two hyperparameters optimization methods were also benchmarked :
-- **genetic algorithm** implemented from scratch with [DEAP](https://deap.readthedocs.io/en/master/)
+- **evolutionary algorithm** implemented from scratch with [DEAP](https://deap.readthedocs.io/en/master/)
 - **bayesian optimization** made easy with [optuna](https://optuna.org/)
 
 **Evaluation results :**
 
-|  Metric\Model   | Custom CNN* | NASNetMobile |  NASNetLarge |
+|  Metric\Model   | Custom CNN * | NASNetMobile |  NASNetLarge |
 | --------------  | --- | ----- | ----- |
-|    Accuracy     | 50.7 |  85.5 |  94.6 |
+|    Accuracy     | 50.7 |  85.5 |  **94.6** |
 
 _* trained with a sample of 12 breeds (10% of total breeds)_
 
