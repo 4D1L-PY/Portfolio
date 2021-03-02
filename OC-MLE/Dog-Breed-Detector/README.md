@@ -34,7 +34,7 @@ Two hyperparameters optimization methods were also benchmarked :
 | --------------  | --- | ----- | ----- |
 |    Accuracy     | 50.7 |  85.5 |  **94.6** |
 
-_* trained with a sample of 12 breeds (10% of total breeds)_
+_* trained with a sample of 10 breeds (10% of total breeds)_
 
 **Main data :**
 
