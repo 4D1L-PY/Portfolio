@@ -13,7 +13,7 @@ Projects carried out for [OpenClassrooms Machine Learning Engineer Path](https:/
 
 - [StackOverflow-Question-Tagger](https://github.com/4D1L-PY/Portfolio/tree/main/OC-MLE/StackOverflow-Question-Tagger) : NLP API that automatically categorize questions related to Stack Overflow website from a deep learning approach (GRU)
 
-- [Dog-Breed-Detector](https://github.com/4D1L-PY/Portfolio/tree/main/OC-MLE/Dog-Breed-Detector) : dog breed detector API built from a deep learning approach with transfert learning.
+- [Dog-Breed-Detector](https://github.com/4D1L-PY/Portfolio/tree/main/OC-MLE/Dog-Breed-Detector) : dog breed detector [Android application](https://github.com/4D1L-PY/Portfolio/tree/main/OC-MLE/Dog-Breed-Detector/applications/kivy_dog_breed_detector) and [web API built](https://github.com/4D1L-PY/Portfolio/tree/main/OC-MLE/Dog-Breed-Detector/applications/flask_dog_breed_detector) from a deep learning approach with transfert learning.
 
 **N.B :**
 
